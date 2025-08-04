@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="logo.jpg" />
-    <title>SPARK</title>
-    <link rel="stylesheet" href="resources.css">
+    <title>SPARK Resources</title>
+    <link rel="stylesheet" href="resources.css" />
 </head>
 
 <body>
-
     <div id="slideshow" class="background-slideshow"></div>
     <div class="overlay"></div>
 
@@ -50,87 +48,130 @@
         </div>
     </header>
 
-    <!-- Main content -->
-    <main class="main-content">
-        <section class="container">
-            <h1 class="main-heading">&nbsp;Curated Learning Resources by SPARK</h1>
-            <p class="subtitle">
-                &nbsp;&nbsp;Handpicked resources for all levels of learners. Start your journey today!
-            </p>
+    <main>
+        <div class="hero-container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Resources For You</h1>
+                    <p>Want to learn something new?<br>
 
-            <!-- Resources Sections -->
-            <div class="section">
-                <h2>For Absolute Beginners</h2>
-                <h3>CodeWithHarry</h3>
-                <ul class="list-disc pl-5">
-                    <li>
-                        <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9aiXlHcLx-mDH1Qul38wD3aR"
-                            target="_blank" rel="noopener noreferrer">C Programming Full Course</a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL"
-                            target="_blank" rel="noopener noreferrer">C++ Programming Full Course</a>
-                    </li>
-                </ul>
-                <p class="note">Simple language, beginner-friendly explanations, and real-time coding.</p>
+                        Here are all the resources you might need</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>LEARN PROGRAMING</h2>
+            <div class="card-container">
+                <div class="card active" onclick="expandCard(this)">
+                    <img src="c2.webp" alt="AR Glasses">
+                    <div class="card-content">
+
+                        <a href="#">Learn C Language </a>
+
+                    </div>
+                </div>
+
+                <div class="card" onclick="expandCard(this)">
+                    <img src="cpp2 - Copy.png" alt="Robot Project">
+                    <div class="card-content">
+                        <a href="#">Learn C++ Language</a>
+                    </div>
+                </div>
+
+                <div class="card" onclick="expandCard(this)">
+                    <img src="java2.webp" alt="Robot Project">
+                    <div class="card-content">
+
+                        <a href="#">Learn Java Language</a>
+                    </div>
+                </div>
+
+                <!-- <div class="card" onclick="expandCard(this)">
+                    <img src="pythonimg.jpg" alt="Robot Project">
+                    <div class="card-content">
+                        <a href="#">Learn Python Language</a>
+                    </div>
+                </div> -->
+            </div>
+            <h2>LEARN WEB DEVLOPMENT </h2>
+            <div class="card-container">
+                <div class="card active" onclick="expandCard(this)">
+                    <img src="fronted.png" alt="AR Glasses">
+                    <div class="card-content">
+
+                        <a href="#">Learn frontend</a>
+
+                    </div>
+                </div>
+
+                <div class="card" onclick="expandCard(this)">
+                    <img src="backend.webp" alt="Robot Project">
+                    <div class="card-content">
+                        <a href="#">Learn Backend</a>
+                    </div>
+                </div>
+
+                <div class="card" onclick="expandCard(this)">
+                    <img src="database.jpg" alt="Robot Project">
+                    <div class="card-content">
+
+                        <a href="#">Learn database</a>
+                    </div>
+                </div>
+
+
+
+                <!-- Add more cards if needed -->
+            </div>
+            <h2>COMPETITIVE PROGRAMING</h2>
+            <div class="card-container">
+                <div class="card active" onclick="expandCard(this)">
+                    <img src="codechef.png" alt="AR Glasses">
+                    <div class="card-content">
+
+                        <a href="#">Practice with Codechef</a>
+
+                    </div>
+                </div>
+
+                <div class="card" onclick="expandCard(this)">
+                    <img src="LeetCode.png" alt="Robot Project">
+                    <div class="card-content">
+                        <a href="#">Practice with LeetCode</a>
+                    </div>
+                </div>
+
+                <div class="card active" onclick="expandCard(this)">
+                    <img src="geeks.jpg" alt="AR Glasses">
+                    <div class="card-content">
+
+                        <a href="#">Practice with geeks </a>
+
+                    </div>
+                </div>
             </div>
 
-            <div class="section">
-                <h2>For Structured Learning</h2>
-                <h3>Apna College</h3>
-                <ul class="list">
-                    <li>
-                        <a href="https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ"
-                            target="_blank" rel="noopener noreferrer">C++ Complete Course</a>
-                    </li>
-                </ul>
-                <p class="note">Taught by college students for college students. Great for systematic progress.</p>
+            <h2>PRACTICE SHEET</h2>
+            <div class="card-container">
+                <div class="card active" onclick="expandCard(this)">
+                    <img src="lab-chart.jpg" alt="AR Glasses">
+                    <div class="card-content">
+
+                        <a href="#">Lab charts </a>
+
+                    </div>
+                </div>
+
+                <div class="card" onclick="expandCard(this)">
+                    <img src="practicebook.jpg" alt="Robot Project">
+                    <div class="card-content">
+                        <a href="#">Learn C Language</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="section">
-                <h2>For Practical Understanding</h2>
-                <h3>Coder Army</h3>
-                <ul class="list">
-                    <li>
-                        <a href="https://www.youtube.com/playlist?list=PLxgZQoSe9cg3YjqNk9UK8kXy5l7BkKfK5"
-                            target="_blank" rel="noopener noreferrer">C Programming Course</a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/playlist?list=PLxgZQoSe9cg3YjqNk9UK8kXy5l7BkKfK5"
-                            target="_blank" rel="noopener noreferrer">C++ Programming Course</a>
-                    </li>
-                </ul>
-                <p class="note">Focus on real-world examples and conceptual clarity.</p>
-            </div>
-
-            <div class="section">
-                <h2>Books & Articles</h2>
-                <ul class="list">
-                    <li><a href="https://drive.google.com/drive/folders/18-1uxPeL38cxItzqSKpmOdl9TWuduREZ"
-                            target="_blank" rel="noopener noreferrer">Computer Lab Charts</a></li>
-                    <li><a href="https://www.geeksforgeeks.org/c/c-programming-language/" target="_blank"
-                            rel="noopener noreferrer">GFG Articles</a></li>
-                    <li><a href="https://drive.google.com/file/d/1xtzhayzQSc_et4-l0tYRWQN-GTbHmpob/view" target="_blank"
-                            rel="noopener noreferrer">All C Programs with Solutions</a></li>
-                </ul>
-            </div>
-
-            <div class="tip ">
-                <h2>SPARK Tip: Small Steps Every Day</h2>
-                <p><strong>Just 20 minutes a day</strong> is enough to build consistency and confidence.</p>
-                <p>Join peer-learning sessions, get doubt support, and grow together!</p>
-            </div>
-
-            <div class="cta">
-                <h2>So, what are you waiting for?</h2>
-                <p>Start today. Let SPARK be the beginning of your coding journey!</p>
-                <p>Contact: <a href="mailto:sparkmbmu@gmail.com">sparkmbmu@gmail.com</a></p>
-            </div>
-        </section>
-        <br /><br />
+        </div>
     </main>
-
-    <!-- Footer -->
     <footer>
         <p>© 2025 SPARK. All rights reserved.</p>
         <div>

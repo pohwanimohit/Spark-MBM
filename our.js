@@ -30,43 +30,37 @@ const menuToggle = document.getElementById("menu-toggle");
     }
   });
 
-  let currentlyOpen = null;
 
-const cards = document.querySelectorAll('.card');
+function toggleLevels(card) {
+  // const description = card.querySelector('.description');
+  const levels = card.querySelector('.levels');
 
-cards.forEach((card) => {
-  const details = card.querySelector('.details');
-  const closeBtn = card.querySelector('.close');
+  const isOpen = levels.style.display === 'flex';
 
-  // Card click (anywhere inside card)
-  card.addEventListener('click', (e) => {
-    if (e.target === closeBtn) return;
+  // Close all open boxes first
+  closeAllBoxes();
 
-    e.stopPropagation(); // Stop bubbling to document
+  // If it was not already open, open this one
+  if (!isOpen) {
+    levels.style.display = 'flex';
+    // description.style.display = 'none';
+  }
+}
 
-    if (currentlyOpen === details) {
-      details.classList.remove('open');
-      currentlyOpen = null;
-    } else {
-      if (currentlyOpen) currentlyOpen.classList.remove('open');
-      details.classList.add('open');
-      currentlyOpen = details;
-    }
+// Close all event boxes
+function closeAllBoxes() {
+  const allBoxes = document.querySelectorAll('.event-box');
+  allBoxes.forEach(box => {
+    box.querySelector('.levels').style.display = 'none';
+    // box.querySelector('.description').style.display = 'block';
   });
+}
 
-  // Close button click
-  closeBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    details.classList.remove('open');
-    if (currentlyOpen === details) currentlyOpen = null;
-  });
-});
-
-// ✅ New code to detect outside clicks
-document.addEventListener('click', () => {
-  if (currentlyOpen) {
-    currentlyOpen.classList.remove('open');
-    currentlyOpen = null;
+// Close if clicked outside
+document.addEventListener('click', function (event) {
+  const isInsideBox = event.target.closest('.event-box');
+  if (!isInsideBox) {
+    closeAllBoxes();
   }
 });
 

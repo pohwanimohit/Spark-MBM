@@ -1,3 +1,5 @@
+
+
 const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   const hamburgerIcon = menuToggle.querySelector("svg:not(#close-icon)");
@@ -29,3 +31,15 @@ const menuToggle = document.getElementById("menu-toggle");
       link.classList.add("active");
     }
   });
+
+  function expandCard(clickedCard) {
+  const cards = document.querySelectorAll('.card');
+  
+  cards.forEach(card => {
+    card.classList.remove('active');
+  });
+
+  clickedCard.classList.add('active');
+}
+  
+
