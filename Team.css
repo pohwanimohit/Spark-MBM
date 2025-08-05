@@ -53,6 +53,7 @@ body::before {
   width: 50px;
   height: auto;
   margin-right: 10px;
+  border-radius: 50%;
 }
 .nav-links {
   display: flex;

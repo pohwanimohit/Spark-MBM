@@ -7,7 +7,8 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #1e1e2f, #121212);
+  /* background: linear-gradient(to bottom, #1e1e2f, #121212);  */
+   background-color: #10131b;
   color: white;
   min-height: 100vh;
 }
@@ -42,6 +43,7 @@ body {
   width: 50px;
   height: auto;
   margin-right: 10px;
+  border-radius: 50%;
 }
 @keyframes fire-flicker {
   0% {
@@ -169,10 +171,10 @@ body {
 }
 
 .hero-content{
-  background-color:rgba(255,255,255, 0.4);
+  background-color:rgba(0,0,0,0.5);
   padding: 40px;
   border-radius: 10px;
-  width:900px;
+  width:700px;
   height: 250px;
   text-align: center;
   display: flex;
@@ -191,79 +193,7 @@ body {
   color:white;
 }
 
-.container h2{
-  text-align: center;
-  margin:2rem;
-  font-size: 2.3rem;
-  font-weight: 400;
-  color: cyan;
-}
 
-
-.card-container {
-  gap: 30px;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-wrap:wrap ;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 200px;
-  height: 270px;
-  transition: all 0.4s ease;
-  position: relative;
-  cursor: pointer;
-  filter: blur(2px);
-  transform: scale(0.9);
-  margin: 2rem;
-}
-
-.card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 8px;
-  height: 40px;
-  display: none;
-}
-
-.card-content a {
-  text-decoration: none;
-  color:black;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-.card-content .read-more {
-  text-decoration: none;
-  background-color: #1e56a0;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-}
-
-.card.active {
-  width: 250px;
-  height: 300px;
-  filter: none;
-  transform: scale(1.05);
-}
-
-.card.active .card-content {
-  display: block;
-}
-
-h2 span {
-  color:#00FFFF;
-}
 
 footer {
   background: #111;
@@ -285,4 +215,109 @@ footer p {
 .footer-link:hover {
   text-decoration: underline;
 }
+
+/* Section Styling */
+
+/* .backimg{
+  background-image: url("bgresour.avif");
+  background-size:cover ;
+} */
+
+.section-container {
+  margin-bottom: 80px;
+  margin-top: 50px;
+  box-shadow:rgba(0, 0, 0, 0.5);
+  
+}
+
+.section-container h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-align: center;
+  color:aliceblue;
+}
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card-row.two-cards {
+  justify-content: center;
+  gap: 50px;
+}
+
+/* Flip Card Core */
+.flip-card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.flip-back {
+  background:rgb(17,24,39, 0.6);
+  padding: 20px;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
+}
+
+.flip-back h3 {
+  margin-bottom: 10px;
+  color:cyan;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.flip-back p{
+  color :wheat
+}
+
+.flip-back a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  background: #ff6600;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
 

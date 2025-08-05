@@ -32,14 +32,13 @@ const menuToggle = document.getElementById("menu-toggle");
     }
   });
 
-  function expandCard(clickedCard) {
-  const cards = document.querySelectorAll('.card');
-  
-  cards.forEach(card => {
-    card.classList.remove('active');
-  });
+  // Apply flip effect on all cards
+const allCards = document.querySelectorAll('.flip-card');
 
-  clickedCard.classList.add('active');
-}
-  
+allCards.forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+  });
+});
+
 
